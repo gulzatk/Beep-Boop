@@ -1,39 +1,33 @@
 function numberReplace(number) {
-  var newNumber = "";
+   var newString = number.toString();
+    // var newString = number.split();
+  var newNumber = [];
 
-    if (number === 0) {
-      return "Beep!"
+    if (newString.includes("0")) {
+     newNumber.push("Beep!");
 
-  } else if (number === 1) {
-     return "Boop!"
-  } else if (number === 3) {
-      return "I am sorry, Dave. I am arfaid I can't to that."
+  } if (newString.includes("1")) {
+ newNumber.push("Boop!");
 
-  } else {
-    return number
-  }
-  }
+} else if (newString%3===0 && newString !==0) {
+ newNumber.push("I am sorry, Dave. I am arfaid I can't to that.");
 
+   } else {
+ newNumber.push(" " + newString);  }
 
+  return newNumber
 
-
-
-
-
-
-
-
-
-
-
+}
 // // User Interface
 $(document).ready(function(){
   $("form#formOne").submit(function(event){
     event.preventDefault();
 
-     var number = parseInt($("input#num").val());
-     var result = numberReplace(number);
+     var number = parseInt($("#num").val());
+
+      var result = numberReplace(number);
 
   $("#output").text(result);
+
   });
 });
