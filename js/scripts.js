@@ -1,40 +1,35 @@
-function numberReplace(number) {
-   var newString = number.toString();
-    var one = newString.includes("1");
-    var zero = newString.includes("0")
-  var newNumber = [];
+function getNumberText(number) {
+  var numberString = number.toString();
+  var containsOne = numberString.includes("1");
+  var containsZero = numberString.includes("0");
+  var divisibleByThree = number != 0 && number % 3 === 0;
 
-for (i = 0; i<= newString; i++) {
-  newNumber.push(i);
-  if (zero === true && one === false) {
-     newNumber[i] = "Beep!";
-
-  } else if (one === true) {
-    newNumber[i] = "Boop!";
-
-} else if (newString.includes("3")) {
- newNumber[i] = "I am sorry, Dave. I am arfaid I can't to that.";
-
-   } else {
- newNumber[i] =  " " + newString;
+  if (divisibleByThree) {
+    return ' "I am sorry, Dave. I am afraid I cannot do that." ';
   }
-}
-  return newNumber;
 
+  if (containsOne) {
+    return "Boop!";
+  }
+
+  if (containsZero) {
+    return "Beep!";
+  }
+
+  return numberString;
 }
+
 // // User Interface
 $(document).ready(function(){
   $("form#formOne").submit(function(event){
     event.preventDefault();
 
-     var number = parseInt($("#num").val());
+    var numberString = parseInt($("#num").val());
+    var result = "";
+    for (var i = 0; i <= numberString; i++) {
+      result += getNumberText(i)  + "<br>";
+    }
 
-      var result = numberReplace(number);
-      // var finalResult = "";
-      // for (i = 0; i < result.length; i++);
-      // finalResult += result[i];
-
-  $("#output").text(result);
-
+    $("#output").html(result);
   });
 });
