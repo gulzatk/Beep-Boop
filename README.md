@@ -1,4 +1,4 @@
-# Number Replacer
+# Beep Boop
 
 #### JavaScript Loop independent project for Epicodus, 10/26/2018
 
@@ -18,9 +18,9 @@ This webpage will take a number from user and replace with **"Beep!" or "Boop!" 
       * Example Input: 1
       * Example Output: ["Boop!"]
 
-  3. Program replaces 3 with _"I am sorry, Dave. I am afraid I can't do that."_
+  3. Program replaces 3 with _"I am sorry, I am afraid I can't do that."_
       * Example Input: 3
-      * Example Output: ["I am sorry, Dave. I am afraid I can't do that."]
+      * Example Output: ["I am sorry, I am afraid I can't do that."]
 
   4. Program should display new result over and over.
       * Example Input: 5
@@ -32,6 +32,14 @@ This webpage will take a number from user and replace with **"Beep!" or "Boop!" 
 
 ## Setup and Installation
 
+Clone the repository.
+
+Open a simple HTTPserver in the top of the cloned directory. For a mac, run the following command in your terminal:
+
+python-m SimpleHTTPServer
+
+Then open your web browser of choice to localhost:8000
+
 ## Support and Contact details
 
   If you have any questions or suggestions please feel free to email me: gulzat.karimova@gmail.com
@@ -42,7 +50,7 @@ This webpage will take a number from user and replace with **"Beep!" or "Boop!" 
 
 ## Webpage link
 
-
+  Http://gulzatk.github.io/beep-boop/
 
 ## License
 
