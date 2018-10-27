@@ -1,21 +1,25 @@
 function numberReplace(number) {
    var newString = number.toString();
-    // var newString = number.split();
+    var one = newString.includes("1");
+    var zero = newString.includes("0")
   var newNumber = [];
 
-    if (newString.includes("0")) {
-     newNumber.push("Beep!");
+for (i = 0; i<= newString; i++) {
+  newNumber.push(i);
+  if (zero === true && one === false) {
+     newNumber[i] = "Beep!";
 
-  } if (newString.includes("1")) {
- newNumber.push("Boop!");
+  } else if (one === true) {
+    newNumber[i] = "Boop!";
 
-} else if (newString%3===0 && newString !==0) {
- newNumber.push("I am sorry, Dave. I am arfaid I can't to that.");
+} else if (newString.includes("3")) {
+ newNumber[i] = "I am sorry, Dave. I am arfaid I can't to that.";
 
    } else {
- newNumber.push(" " + newString);  }
-
-  return newNumber
+ newNumber[i] =  " " + newString;
+  }
+}
+  return newNumber;
 
 }
 // // User Interface
@@ -26,6 +30,9 @@ $(document).ready(function(){
      var number = parseInt($("#num").val());
 
       var result = numberReplace(number);
+      // var finalResult = "";
+      // for (i = 0; i < result.length; i++);
+      // finalResult += result[i];
 
   $("#output").text(result);
 
