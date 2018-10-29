@@ -24,7 +24,7 @@ This webpage will take a number from user and replace with **"Beep!" or "Boop!" 
 
   4. Program should display new result over and over.
       * Example Input: 5
-      * Example Output: ["Beep!", "Boop!", 2, "I am sorry, Dave. I am afraid I can't do that.", 4, 5]
+      * Example Output: ["Beep!", "Boop!", 2, "I am sorry. I am afraid I can't do that.", 4, 5]
 
   5. The first exception shoud apply unless the second does and the same with second and third.
       * Example Input: 10
@@ -50,7 +50,7 @@ Then open your web browser of choice to localhost:8000
 
 ## Webpage link
 
-http://gulzatk.github.io/beep-boop/
+http://gulzatk.github.io/Beep-Boop/
 
 ## License
 
