@@ -50,7 +50,7 @@ Then open your web browser of choice to localhost:8000
 
 ## Webpage link
 
-  Http://gulzatk.github.io/beep-boop/
+  http://gulzatk.github.io/Beep-Boop/
 
 ## License
 
