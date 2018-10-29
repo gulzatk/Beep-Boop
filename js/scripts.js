@@ -1,4 +1,6 @@
-function getNumberText(number) {
+// Business Logic
+
+function calculateNumberValue(number) {
   var numberString = number.toString();
   var containsOne = numberString.includes("1");
   var containsZero = numberString.includes("0");
@@ -19,17 +21,22 @@ function getNumberText(number) {
   return numberString;
 }
 
+function calculateValuesUpToNumber(number) {
+  var result = "";
+  for (var i = 0; i <= number; i++) {
+    result += calculateNumberValue(i)  + "<br>";
+  }
+
+  return result;
+}
+
 // // User Interface
 $(document).ready(function(){
   $("form#formOne").submit(function(event){
     event.preventDefault();
 
-    var numberString = parseInt($("#num").val());
-    var result = "";
-    for (var i = 0; i <= numberString; i++) {
-      result += getNumberText(i)  + "<br>";
-    }
+    var number = parseInt($("#num").val());
 
-    $("#output").html(result);
+    $("#output").html(calculateValuesUpToNumber(number));
   });
 });
