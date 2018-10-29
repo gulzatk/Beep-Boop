@@ -7,7 +7,7 @@ function calculateNumberValue(number) {
   var divisibleByThree = number != 0 && number % 3 === 0;
 
   if (divisibleByThree) {
-    return ' "I am sorry, Dave. I am afraid I cannot do that." ';
+    return ' "I am sorry. I am afraid I cannot do that." ';
   }
 
   if (containsOne) {
